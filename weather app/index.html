@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Weather app</h1>
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your weather</p>
+            <p class="tab" data-searchWeather> Search Weather</p>
+        </div>
+        <!-- secondwala lower div wala part  3view hai ek ek hidden hai-->
+        <div class="weather-container">
+            <!-- Grant your location screen -->
+            <div class="sub-container grant-location-container">
+                <img src="./assets/location.png" alt="" width="80" height="80" loading="lazy">
+                <p>Grant location</p>
+                <p>Allow access weather location</p>
+                <button class="btn" data-grantAccess>Grant access</button>
+            </div>
+            <!-- search form  2nd view container -->
+            <form class="form-container" data-searchForm>
+                <input placeholder="enter city name" data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="./assets/search.png" alt="" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- loading screen conatiner -->
+            <div class="sub-container loading-container">
+                <img src="./assets/loading.gif" alt="" width="150" height="150">
+                <p>Loading</p>
+            </div>
+            <!-- show weather info -->
+            <div class="sub-container user-info-container">
+                <div class="name">
+                    <p data-cityName></p>
+                    <!-- image will be dynamic so no need to have syantax complte -->
+                    <img data-countryIcon>
+                </div>
+                <!-- weather des -->
+                <p data-weatherDesc></p>
+                <!-- weather icon -->
+                <img data-weatherIcon>
+                <!-- temperrrature -->
+                <p data-temp></p>
+                <!-- 3 card parametr -->
+                <div class="parameter-container">
+                    <!-- card1 -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png" alt="">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+                    <!-- card2 -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png" alt="">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <!-- card3 -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png" alt="">
+                        <p>Cloud</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./inex.js"></script>
+</body>
+
+</html>
